@@ -42,14 +42,13 @@ namespace Task3._13
             }
             
             Console.WriteLine();
+            ThreadStart newThreadStart = () => { createRandomString(randNum.Next(5, 20)); };
+            newThreadStart();
         }
         static void Main(string[] args)
         {
-            while (true)
-            {
                 Random rand = new Random();
                 createRandomString(rand.Next(5,20));
-            }
         }
     }
 }
